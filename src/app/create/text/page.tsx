@@ -87,7 +87,7 @@ export default function UploadSection() {
           image_url:  imageRes.data.file_url
         }, {timeout: 180000}
       ).catch((error) => {
-        throw new Error("Processing image failed", error.message);
+        throw new Error("Service is permanently unavailable", error.message);
       });
 
       console.log("URL for processed image: ", processRes.data.image_url)

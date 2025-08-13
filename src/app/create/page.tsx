@@ -109,7 +109,7 @@ export default function Create() {
         headers: { "Content-Type": "multipart/form-data" },
         timeout: 180000,
       }).catch((error) => {
-        throw new Error("Processing image failed", error.message);
+        throw new Error("Service is permanently unavailable", error.message);
       });      
 
       console.log('File URL:', processRes.data.image_url);
@@ -118,7 +118,7 @@ export default function Create() {
       const res = await axios.post(`${BACKEND_URL}/make_3d`, {
         image_url: processRes.data.image_url
       }, {timeout: 180000}).catch((error) => {
-        throw new Error("Processing image failed", error.message);
+        throw new Error("Service is permanently unavailable", error.message);
       });
       console.log('Model URL:', res.data.model_url);
       setObjURL(res.data.model_url);

@@ -53,7 +53,7 @@ export default function App() {
               </div>
                 <div>
                     <div className="-mr-24 rounded-lg md:rounded-l-full md:w-auto bg-gradient-to-br from-gray-900 to-black h-96 content-center flex items-center">
-                      <Viewer url={ROBOT_DEMO_URL} rotate={[0.00, 0.01, 0.00]} width={400}></Viewer>
+                      {/* <Viewer url={ROBOT_DEMO_URL} rotate={[0.00, 0.01, 0.00]} width={400}></Viewer> */}
                     </div>
                 </div>
             </div>
